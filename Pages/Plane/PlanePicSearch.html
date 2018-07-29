@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>照片管理</title>
+    <link href="../../ThirdParty/Bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="../../ThirdParty/Bootstrap/css/font-awesome.css" rel="stylesheet" />
+    <link href="../../ThirdParty/Bootstrap/css/bootstrapValidator.css" rel="stylesheet" />
+    <link href="../../ThirdParty/Bootstrap/css/bootstrap-table.min.css" rel="stylesheet" />
+    <link href="../../Assets/styles/custom-styles.css" rel="stylesheet" />
+    <link href="../../Assets/styles/subpage-style.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <ol class="breadcrumb">
+                <li><a href="#">飞机作业信息管理</a></li>
+                <li>照片</li>
+                <li class="active">查询</li>
+            </ol>
+        </div>
+
+        <div id="dashboard" class="container">
+           
+            <div class="row-fluid">
+                <div class="col-md-12">
+                    <div class="portlet-body">
+                        <form class="form-horizontal" role="form" action="#" id="form_time">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group ">
+                                        <label for="txtStartTime"  class=" control-label col-md-2">起始时间：</label>
+                                        <div class="col-md-4">
+                                            <input id="txtStartTime" name="txtStartTime" type="date" class="form-control col-md-8 col-sm-6 col-sm-6" />
+                                        </div>
+                                        <label for="txtEndTime" class=" control-label col-md-2">结束时间：</label>
+                                        <div class="col-md-4">
+                                            <input id="txtEndTime"  name="txtEndTime" type="date" class="form-control col-md-8 col-sm-6 col-sm-6" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <button class="btn btn-primary" id="btn_query" type="button" >
+                                            查询 <i class="icon-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="gallery-wrapper" id="picContainer">
+                        <div class="row gallery-row">
+                            <table class="table table-striped table-hover table-bordered"
+                                   id="tab_PlanePic"></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../../ThirdParty/require.js"></script>
+    <script src="../../Source/requirejs.config.js"></script>
+    <script src="../../Source/PlaneManager/PlanePicSearch.js"></script>
+
+
+    <!--<script src="../../../ThirdParty/require.js" data-main="../../../Source/Planes/Plane.Pic.main.js" async="async" defer="defer"></script>-->
+    
+</body>
+</html>

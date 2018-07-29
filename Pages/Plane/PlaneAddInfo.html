@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>作业信息添加</title>
+    <link href="../../ThirdParty/Bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="../../ThirdParty/Bootstrap/css/font-awesome.css" rel="stylesheet" />
+    <link href="../../ThirdParty/Bootstrap/css/bootstrap-select.css" rel="stylesheet" />
+    <link href="../../ThirdParty/Bootstrap/css/bootstrap-fileinput.min.css" rel="stylesheet" />
+    <link href="../../ThirdParty/Bootstrap/css/bootstrapValidator.css" rel="stylesheet" />
+    <link href="../../ThirdParty/Bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <link href="../../ThirdParty/toastr/toastr.css" rel="stylesheet" />
+    <link href="../../ThirdParty/select/css/select2.min.css" rel="stylesheet" />
+    <link href="../../Assets/styles/custom-styles.css" rel="stylesheet" />
+    <link href="../../Assets/styles/subpage-style.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <ol class="breadcrumb">
+                <li><a href="../PlaneIndex.html">首页</a></li>
+                <li><a href="#">飞机作业信息</a></li>
+                <li class="active">添加</li>
+            </ol>
+        </div>
+
+        <div class="container">
+
+            <form class="form-horizontal" id="form_info">
+                <div class="form-group">
+                    <label class=" col-sm-3 control-label" for="in_workid">作业编号：</label>
+                    <div class=" col-sm-3">
+                        <input type="text" value="" size="16" id="in_workid" name="in_workid" class="form-control">
+                    </div>
+
+                    <label class=" col-sm-3 control-label" for="sel_reporter">作业目的：</label>
+                    <div class=" col-sm-3 ">
+                        <select id="sel_purpose" name="sel_purpose" class="form-control required js-example-tags"></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-3  control-label" for="indt_startTime">开始时间：</label>
+                    <div class=" col-sm-3 ">
+                        <input type="text" value="" class="form_datetime form-control mytimeMinute" id="indt_startTime" name="indt_startTime">
+                    </div>
+                    <label class=" col-sm-3 control-label" for="indt_endTime">结束时间</label>
+                    <div class=" col-sm-3">
+                        <input type="text" value="" class="form_datetime form-control mytimeMinute" id="indt_endTime" name="indt_endTime">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-3  control-label" for="indt_startWorkTime">开始作业时间：</label>
+                    <div class=" col-sm-3 ">
+                        <input type="text" value="" class="form_datetime form-control mytimeMinute" id="indt_startWorkTime" name="indt_startWorkTime">
+                    </div>
+                    <label class=" col-sm-3 control-label" for="indt_endWorkTime">结束作业时间</label>
+                    <div class=" col-sm-3">
+                        <input type="text" value="" class="form_datetime form-control mytimeMinute" id="indt_endWorkTime" name="indt_endWorkTime">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class=" col-sm-3  control-label" for="sel_airport_start">起飞机场：</label>
+                    <div class=" col-sm-3 ">
+                        <select id="sel_airport_start" name="sel_airport_start" class="form-control required js-example-tags"></select>
+                    </div>
+                    <label class=" col-sm-3 control-label" for="sel_airport_end">降落机场：</label>
+                    <div class=" col-sm-3">
+                        <select id="sel_airport_end" name="sel_airport_end" class="form-control required js-example-tags"></select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+
+                    <label class=" col-sm-3 control-label" for="sel_reporter">录入人员：</label>
+                    <div class=" col-sm-3 ">
+                        <select id="sel_reporter" name="sel_reporter" class="form-control required js-example-tags"></select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class=" col-sm-3 control-label" for="file_log">宏观记录</label>
+                    <div class=" col-sm-7">
+                        <input type="file" id="file_log" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class=" col-sm-3 control-label" for="file_thermo">串口数据</label>
+                    <div class=" col-sm-7">
+                        <input type="file" id="file_thermo" multiple   />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class=" col-sm-3 control-label" for="file_dmt">DMT数据</label>
+                    <div class=" col-sm-9">
+                        <input type="file" id="file_dmt" webkitdirectory />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class=" col-sm-3 control-label" for="file_pic">照片</label>
+                    <div class=" col-sm-9">
+                        <input type="file" id="file_pic" multiple />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class=" col-sm-3 control-label" for="file_gps">GPS</label>
+                    <div class=" col-sm-9">
+                        <input type="file" id="file_gps" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <center>
+                        <button id="btn_save" type="button" class="btn btn-primary btn-md ">&nbsp;保 &nbsp;&nbsp; 存&nbsp;</button>
+                        <button id="btn_reset" type="button" class="btn btn-primary btn-md ">&nbsp;重 &nbsp;&nbsp; 置&nbsp;</button>
+                    </center>
+                </div>
+
+            </form>
+        </div>
+
+        
+
+
+    </div>
+
+
+
+    <script src="../../ThirdParty/require.js"></script>
+    <script src="../../Source/requirejs.config.js"></script>
+    <script src="../../Source/PlaneManager/PlaneAddInfo.js"></script>
+
+
+</body>
+</html>

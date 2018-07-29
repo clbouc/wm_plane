@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>个人信息管理</title>
+    <style>
+        @import url(../../ThirdParty/Bootstrap/css/bootstrap.css);
+        @import url(../../ThirdParty/Bootstrap/css/bootstrap-theme.min.css);
+        @import url(../../ThirdParty/Bootstrap/css/bootstrap-table.min.css);
+        @import url(../../ThirdParty/Bootstrap/css/font-awesome.css);
+        @import url(../../ThirdParty/Bootstrap/css/bootstrap-select.css);
+        @import url(../../ThirdParty/Bootstrap/css/bootstrapValidator.css);
+        @import url(../../ThirdParty/toastr/toastr.css);
+        @import url(../../Assets/styles/custom-styles.css);
+        @import url(../../Assets/styles/subpage-style.css);
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+    </div>
+
+    <div class="container">
+        <ul id="myTab" class="nav nav-tabs">
+            <li class="active"><a href="#tab_info" data-toggle="tab">个人信息</a></li>
+            <li><a href="#tab_pwd" data-toggle="tab">修改密码</a></li>
+            <li><a href="#tab_log" data-toggle="tab">日志</a></li>
+        </ul>
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade in active" id="tab_info">
+                <form id="form_register" class="form-group form-horizontal" action="">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="sel_unit">单位</label>
+                        <div class="col-sm-8">
+                            <select id="sel_unit" name="sel_unit" class="form-control">
+                                <option>北京市人工影响天气办公室</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="sel_department" class="col-sm-3 control-label">科室</label>
+                        <div class="col-sm-8">
+                            <select id="sel_department" name="sel_department" class="form-control">
+                                <option>雷达科</option>
+                                <option>飞行作业科</option>
+                                <option>安全保障科</option>
+                                <option>业务科</option>
+                                <option>模式预报科</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txt_name" class="col-sm-3 control-label">姓名</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" id="txt_name" name="txt_name" type="text" placeholder="真实姓名">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sel_gender" class="col-sm-3 control-label">性别</label>
+                        <div class="col-sm-8">
+                            <select id="sel_gender" name="sel_gender" class="form-control">
+                                <option>男</option>
+                                <option>女</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txt_birthday" class="col-sm-3 control-label">出生日期</label>
+                        <div class="col-sm-8">
+                            <input id="txt_birthday" type="date" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txt_position" class="col-sm-3 control-label">职位</label>
+                        <div class="col-sm-8">
+                            <select id="sel_position" name="sel_position" class="form-control">
+                                <option>主任</option>
+                                <option>副主任</option>
+                                <option>正科长</option>
+                                <option>副科长</option>
+                                <option>职员</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txt_useid" class="col-sm-3 control-label">用户名</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" id="txt_useid" name="txt_useid" type="text" placeholder="6-15位字母或数字,需字母或下划线开头">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txt_email" class="col-sm-3 control-label">邮箱</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" id="txt_email" name="txt_email" type="email" placeholder="例如:123@123.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txt_qq" class="col-sm-3 control-label">QQ</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" id="txt_qq" name="txt_qq" type="text" placeholder="123456789">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txt_telphone" class="col-sm-3 control-label">手机号</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" id="txt_telphone" name="txt_telphone" type="text" placeholder="135888888888">
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button id="btn_submit" class="btn btn-primary" type="button">提交</button>
+                        <button class="btn btn-danger" data-dismiss="modal">取消</button>
+                    </div>
+
+                </form>
+            </div>
+            <div class="tab-pane fade" id="tab_pwd">
+                <form id="form_pwd" class="form-group form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-6 control-label" for="txt_pwd1">请输入新密码</label>
+                        <div class="col-sm-6">
+                            <input class="form-control" name="txt_pwd1" id="txt_pwd1" type="password" placeholder="至少6位字母或数字" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-6 control-label" for="txt_pwd2">再次输入密码</label>
+                        <div class="col-sm-6">
+                            <input class="form-control" name="txt_pwd2" id="txt_pwd2" type="password" placeholder="至少6位字母或数字" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button id="btn_save" class="btn btn-primary" type="button">保存</button>
+                        <button id="btn_reset" class="btn btn-default" type="button">重置</button>
+                    </div>
+                </form>
+            </div>
+            <div class="tab-pane fade" id="tab_log">
+                <form id="form_log" class="form-group form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="txt_startTime">起始时间</label>
+                        <div class="col-sm-3">
+                            <input class="from-control" id="txt_startTime" type="date" name="txt_startTime" />
+                        </div>
+                        <label class="col-sm-2 control-label" for="txt_endTime">结束时间</label>
+                        <div class="col-sm-3">
+                            <input class="from-control" id="txt_endTime" type="date" name="txt_endTime" />
+                        </div>
+                        <button id="btn_search" class="btn btn-primary" type="button">查询</button>
+                    </div>
+                </form>
+
+                <table id="tb_log" class="table table-striped table-hover table-bordered"></table>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../../ThirdParty/require.js"></script>
+    <script src="../../Source/requirejs.config.js"></script>
+    <script src="../../Source/UserManager/UserManager.main.js"></script>
+
+</body>
+</html>

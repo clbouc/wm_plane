@@ -1,0 +1,310 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="" name="description" />
+    <meta content="webthemez" name="author" />
+    <title>数据查询</title>
+
+    <link href="../../ThirdParty/Bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="../../ThirdParty/Bootstrap/css/font-awesome.css" rel="stylesheet" />
+    <link href="../../ThirdParty/morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <link href="../../Assets/styles/custom-styles.css" rel="stylesheet" />
+    <link href="../../ThirdParty/Lightweight-Chart/cssCharts.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #EDEDED;
+        }
+        .floatnav {
+            position: absolute;
+            z-index: 100;
+            top: 30%;
+            left: 80%;
+            width:200px;
+            height: 400px;
+            background-color: #CCC
+        }   
+
+        /*html, body, #cesiumContainer {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }*/
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+           
+            <ol class="breadcrumb">
+                <li><a href="../PlaneIndex.html">首页</a></li>
+                <li><a href="#">监测数据</a></li>
+                <li class="active">个例查看</li>
+            </ol>
+        </div>
+
+        <div id="dashboard">
+            <div class="row-fluid">
+                <div class="col-md-12">
+                    <div class="col-md-12 responsive" data-tablet="col-md-12" data-desktop="col-md-12">
+                        
+                        <div class="portlet box">
+                            <div class="portlet-body">
+                                <form class="form-horizontal" role="form" action="#">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <div class="col-lg-1 col-md-1 col-sm-2 col-xs-3 text-right">
+                                                <label for="cobYear" class="control-label">年：</label>
+                                            </div>
+                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                                                <select class="form-control" name="cobYear" id="cobYear">
+                                                    <option>请选择</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-1 col-md-1 col-sm-2 col-xs-3 text-right">
+                                                <label for="cobMonth" class="control-label">月：</label>
+                                            </div>
+                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                                                <select class="form-control" name="cobMonth" id="cobMonth">
+                                                    <option>请选择</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right">
+                                                <label for="cobCode" class="control-label">作业编号：</label>
+                                            </div>
+                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                                                <select class="form-control" name="cobCode" id="cobCode">
+                                                    <option>请选择</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-1 col-md-2 col-sm-3 col-xs-3">
+                                                <button class="btn btn-primary" id="btn_query" type="button">
+                                                    查询 <i class="icon-search"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+
+
+                                <table class="table table-striped table-hover table-bordered"
+                                       id="tab_PlaneLog"></table>
+
+                            </div>
+
+                        </div>
+
+                        <!-- END EXAMPLE TABLE PORTLET-->
+
+                    </div>
+                </div>
+            </div>
+
+            <!--宏观记录-->
+            <div class="row-fluid">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion"
+                                   href="#collapse_log">
+                                    宏观记录
+                                </a>
+                            </h4>
+                        </div>
+                        
+                        <div id="collapse_log" class="panel-collapse collapse in">
+                            <div class="panel-body" id="PlaneLog">
+                                <div class="col-lg-12">
+                                    <table class="table table-bordered table-striped" id="tab_log" style="table-layout:fixed;">
+
+                                        <tr>
+                                            <th>实施单位：</th>
+                                            <td>北京市人工影响天气办公室</td>
+                                            <th>登机人员：</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>飞机型号：</th>
+                                            <td>运12</td>
+                                            <th>飞行目的：</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>作业编号：</th>
+                                            <td></td>
+                                            <th>飞行方案：</th>
+                                            <td></td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>滑行时间：</th>
+                                            <td></td>
+                                            <th>起飞时间：</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>降落时间：</th>
+                                            <td></td>
+                                            <th>到位时间：</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>起降机场：</th>
+                                            <td></td>
+                                            <th>备降机场：</th>
+                                            <td></td>
+                                        </tr>
+
+                                        <tr>
+                                            <th colspan="4" style="text-align:center;">登机作业技术人员</th>
+                                        </tr>
+                                        <tr>
+                                            <th>指挥：</th>
+                                            <td></td>
+                                            <th>宏观记录：</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>通讯记录：</th>
+                                            <td></td>
+                                            <th>仪器操作：</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="4" style="text-align:center;">机组人员</th>
+                                        </tr>
+                                        <tr>
+                                            <th>机长：</th>
+                                            <td></td>
+                                            <th>副驾驶：</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>机械师：</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>原始文件：</th>
+                                            <td></td>
+                                            <td><a>预览</a></td>
+                                            <td><a>下载</a></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--探测数据-->
+            <div class="row-fluid">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion"
+                                   href="#collapse_data">
+                                    飞机探测数据
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse_data" class="panel-collapse collapse in">
+                            <div class="panel-body" id="PlaneElement">
+                                <form class="form-horizontal" role="form" action="#">
+                                    <div id="plane_data_element" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:380px; overflow:auto;">
+                                    
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12">
+                                        <button class="btn btn-primary" id="btn_view" type="button">
+                                            查询 <i class="icon-search"></i>
+                                        </button>
+                                        <button class="btn btn-primary" id="btn_down" type="button">
+                                            打包下载<i class="icon-search"></i>
+                                        </button>
+                                    </div>
+
+                                </form>
+
+                                <div id="chartContainer">
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--航迹-->
+            <div class="row-fluid">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion"
+                                   href="#collapse_gps">
+                                    飞机航迹展示
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse_gps" class="panel-collapse collapse in">
+                            <div class="panel-body col-lg-12 col-md-12 col-sm-12 col-xs-12" id="echartMapContainer" style="height:600px;">
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--照片-->
+            <div class="row-fluid">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion"
+                                   href="#collapse_pic">
+                                    照片
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse_pic" class="panel-collapse collapse in">
+                            <div class="panel-body" id="picContainer">
+                                <div id="myCarousel" class="carousel slide" style="height:400px;">
+
+                                    <!--图片-->
+                                    <div id="item_carousel" class="carousel-inner">
+                                    </div>
+
+                                    <!--索引-->
+                                    <ol id="ul_carousel" class="carousel-indicators"></ol>
+
+                                    <!-- 轮播（Carousel）导航 -->
+                                    <a class="carousel-control left middle" href="#myCarousel" data-slide="prev" style="font-size: 100px;">&lsaquo;</a>
+                                    <a class="carousel-control right middle" href="#myCarousel" data-slide="next" style="font-size: 100px;">&rsaquo;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../../ThirdParty/require.js"></script>
+    <script src="../../Source/requirejs.config.js"></script>
+    <script src="../../Source/PlaneManager/PlaneSingleInfo.js"></script>
+
+</body>
+</html>

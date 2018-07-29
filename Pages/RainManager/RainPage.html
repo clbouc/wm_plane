@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>雨量数据查询显示</title>
+    <link href="../../../../ThirdParty/Bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="../../../ThirdParty/Bootstrap/css/font-awesome.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="header">
+        <h2 class="page-header">
+            雨量数据查询显示 <small>欢迎您的到来！</small>
+        </h2>
+        <ol class="breadcrumb">
+            <li><a href="../PlaneIndex.html">首页</a></li>
+            <li><a href="#">雨量</a></li>
+            <!--<li class="active">日历</li>-->
+        </ol>
+
+    </div>
+
+    <div class="container">
+
+
+
+        <div id="rainStationDiv">
+          
+        </div>
+
+
+        <form class="form-horizontal" role="form" action="#">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-6">
+                    <div class="form-group ">
+                        <label for="txtStartTime"
+                               class=" control-label col-md-6 col-sm-6 col-xs-6">起始时间：</label>
+
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <input id="txtStartTime" type="date" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4  col-sm-6 col-xs-6">
+                    <div class="form-group">
+                        <label for="txtEndTime"
+                               class=" control-label col-md-6 col-sm-6 col-xs-6">结束时间：</label>
+
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <input id="txtEndTime" type="date" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class="col-md-3">
+                <div class="form-group">
+                    <button id="sample_editable_1_new" class="btn btn-primary" type="button">
+                        添加 <i class="icon-plus"></i>
+                    </button>
+                </div>
+            </div>-->
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-6">
+                    <div class="form-group">
+                        <label for="selWeather" class="control-label col-md-6 col-sm-6 col-xs-6">区域：</label>
+
+                        <div class="col-md-6  col-sm-6 col-xs-6">
+                            <select id="selWeather" class="form-control">
+                                <option>增雨</option>
+                                <option>防雹</option>
+                                <option>消雨</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-6">
+                    <div class="form-group">
+                        <label for="selStation" class="col-md-6 col-sm-6 col-xs-6 control-label">站点：</label>
+
+                        <div class="col-md-6  col-sm-6 col-xs-6">
+                            <select id="selStation" class="form-control">
+                               
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-6">
+                    <div class="form-group">
+                        <button class="btn btn-primary" id="btn_query" type="button" onclick="SearchRain();">
+                            查询 <i class="icon-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+
+        <div id="rainDiv" class="row" style="width: 1000px;height: 800px;" onmousedown="">
+        </div>
+    </div>
+    
+    <script src="../../../ThirdParty/JQuery/jquery-1.10.2.js"></script>
+    <script src="../../../ThirdParty/Bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../ThirdParty/chart/echarts.min.js"></script>
+    <script src="../../Assets/scripts/MydateTime.js"></script>
+    <!--<script src="../../../ThirdParty/datetime/date.js"></script>-->
+    <script src="../../../ThirdParty/datetime/date-zh-CN.js"></script>
+    <script src="../../../ThirdParty/datetime/time.js"></script>
+    <script type="text/javascript" src="../../../Assets/scripts/appconfig.js"></script>
+
+    <script src="cimissRain.js" type="text/javascript" ></script>
+
+
+</body>
+</html>

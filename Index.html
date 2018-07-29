@@ -1,0 +1,931 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="" name="description" />
+    <meta content="webthemez" name="author" />
+    <title>北京市人影办综合业务系统</title>
+    <!-- Bootstrap Styles-->
+    <link href="ThirdParty/Bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+    <!-- FontAwesome Styles-->
+    <link href="ThirdParty/Bootstrap/css/font-awesome.css" rel="stylesheet" />
+
+    <!-- Morris Chart Styles-->
+    <link href="ThirdParty/morris/morris-0.4.3.min.css" rel="stylesheet" />
+
+    <!-- Custom Styles-->
+    <link href="Assets/styles/custom-styles.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div id="wrapper">
+
+        <!--NAV TOP-->
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="PlaneIndex.html"><strong> 人影办综合业务系统</strong></a>
+
+                <div id="sideNav" href="">
+                    <i class="fa fa-bars icon"></i>
+                </div>
+            </div>
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Doe</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Today</em>
+                                    </span>
+                                </div>
+                                <div>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem Ipsum has been the industry's standard dummy text ever since an kwilnw...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem Ipsum has been the industry's standard dummy text ever since the...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Read All Messages</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-tasks">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 1</strong>
+                                        <span class="pull-right text-muted">60% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 2</strong>
+                                        <span class="pull-right text-muted">28% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100" style="width: 28%">
+                                            <span class="sr-only">28% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 3</strong>
+                                        <span class="pull-right text-muted">60% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 4</strong>
+                                        <span class="pull-right text-muted">85% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+                                            <span class="sr-only">85% Complete (danger)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Tasks</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-tasks -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> New Comment
+                                    <span class="pull-right text-muted small">4 min</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                    <span class="pull-right text-muted small">12 min</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                    <span class="pull-right text-muted small">4 min</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> New Task
+                                    <span class="pull-right text-muted small">4 min</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                    <span class="pull-right text-muted small">4 min</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li>
+                            <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+        </nav>
+        <!--/. NAV TOP  -->
+
+
+        <!-- NAV SIDE  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                    <li>
+                        <a href="Pages/PlaneMain.html" target="_iframeContent"><i class="fa fa-dashboard"></i> 首页</a>
+                    </li>
+
+                    <li>
+                        <a href="Pages/PlaneCalender.html" target="_blank"><i class="fa fa-table"></i>实时业务<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+
+                            <li>
+                                <a href="" target="_iframeContent"><span class="fa arrow"></span><i class="fa fa-table"></i>天气过程预报、计划制定</a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="Pages/PlaneLogCalender.html" target="_iframeContent">业务规范</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneLog.html" target="_iframeContent">市局精细化预报</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneLog.html" target="_iframeContent"><span class="fa arrow"></span>作业计划</a>
+                                        <ul class="nav nav-fourth-level">
+                                            <li>
+                                                <a href="Pages/PlaneLog.html" target="_iframeContent">产品制作</a>
+                                            </li>
+                                            <li>
+                                                <a href="Pages/PlaneLog.html" target="_iframeContent">产品发布</a>
+                                            </li>
+                                            <li>
+                                                <a href="Pages/PlaneLog.html" target="_iframeContent">统计查询</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="" target="_iframeContent"><span class="fa arrow"></span><i class="fa fa-table"></i>条件潜力预报、预案制定</a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="Pages/PlanePicCalendar.html" target="_iframeContent">业务规范</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlanePic.html" target="_iframeContent">市局模式预报产品</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlanePic.html" target="_iframeContent"><span class="fa arrow"></span>潜力预报</a>
+                                        <ul class="nav nav-fourth-level">
+                                            <li>
+                                                <a href="Pages/PlaneLog.html" target="_iframeContent">产品制作</a>
+                                            </li>
+                                            <li>
+                                                <a href="Pages/PlaneLog.html" target="_iframeContent">产品发布</a>
+                                            </li>
+                                            <li>
+                                                <a href="Pages/PlaneLog.html" target="_iframeContent">统计查询</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlanePic.html" target="_iframeContent"><span class="fa arrow"></span>飞机预案</a>
+                                        <ul class="nav nav-fourth-level">
+                                            <li>
+                                                <a href="Pages/PlaneLog.html" target="_iframeContent">产品制作</a>
+                                            </li>
+                                            <li>
+                                                <a href="Pages/PlaneLog.html" target="_iframeContent">产品发布</a>
+                                            </li>
+                                            <li>
+                                                <a href="Pages/PlaneLog.html" target="_iframeContent">统计查询</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="" target="_iframeContent"><span class="fa arrow"></span><i class="fa fa-table"></i>条件预警、作业方案设计</a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="Pages/PlaneRouteCalendar.html" target="_iframeContent">业务规范</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneRoute.html" target="_iframeContent">雷达监测</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneRoute.html" target="_iframeContent">冰雹识别</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneRoute.html" target="_iframeContent">监测预警产品制作</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneRoute.html" target="_iframeContent">飞机方案设计</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneRoute.html" target="_iframeContent">统计查询</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="" target="_iframeContent"><span class="fa arrow"></span><i class="fa fa-table"></i>跟踪指挥和作业实施</a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="Pages/PlaneGpsCalendar.html" target="_iframeContent">业务规范</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneGps.html" target="_iframeContent">空域申请</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneGps.html" target="_iframeContent">视频监控</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneGps.html" target="_iframeContent">雷达</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneGps.html" target="_iframeContent">飞机作业指令</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneGps.html" target="_iframeContent">地面作业指令</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneGps.html" target="_iframeContent">统计查询</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" target="_iframeContent"><span class="fa arrow"></span><i class="fa fa-table"></i>作业信息收集和效果检验</a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="Pages/PlaneDMTCalendar.html" target="_iframeContent">业务规范</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneDMT.html" target="_iframeContent"><span class="fa arrow"></span>信息采集上报</a>
+                                        <ul class="nav nav-fourth-level">
+                                            <li>
+                                                <a href="Pages/PlaneDMTCalendar.html" target="_iframeContent">信息采集</a>
+                                            </li>
+                                            <li>
+                                                <a href="Pages/PlaneDMT.html" target="_iframeContent">信息上报</a>
+
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneDMT.html" target="_iframeContent"><span class="fa arrow"></span>产品制作</a>
+                                        <ul class="nav nav-fourth-level">
+                                            <li>
+                                                <a href="Pages/PlaneDMTCalendar.html" target="_iframeContent">快讯</a>
+                                            </li>
+                                            <li>
+                                                <a href="Pages/PlaneDMT.html" target="_iframeContent">简报</a>
+
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneDMT.html" target="_iframeContent"><span class="fa arrow"></span>效果检验</a>
+                                        <ul class="nav nav-fourth-level">
+                                            <li>
+                                                <a href="Pages/PlaneDMTCalendar.html" target="_iframeContent">单次效果评估</a>
+                                            </li>
+                                            <li>
+                                                <a href="Pages/PlaneDMT.html" target="_iframeContent">年度效果评估</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap"></i>日常业务<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href=""><span class="fa arrow"></span>日常检查</a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="Pages/PlaneLogCalender.html" target="_iframeContent">作业点抽查</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneLog.html" target="_iframeContent">视频检查</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href=""><span class="fa arrow"></span>值班信息</a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="Pages/PlaneLogCalender.html" target="_iframeContent">值班日志</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneLog.html" target="_iframeContent">值班表</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneLog.html" target="_iframeContent">值班月考核</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="morris-chart.html"><span class="fa arrow"></span>报表查询</a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href=""><span class="fa arrow"></span>应急响应总结</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneLogCalender.html" target="_iframeContent">作业效益报</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneLog.html" target="_iframeContent">人影（半）年报表</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneLog.html" target="_iframeContent">效果评估年报</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap"></i>保障业务<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="">物联网</a>
+                            </li>
+                            <li>
+                                <a href="">装备信息</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+
+                        <a href="Pages/PlaneWorkInfo.html" target="_iframeContent"><i class="fa fa-qrcode"></i>信息管理<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="Pages/PlaneManager/PlaneIndex.html"><i class="icon fa fa-plane"></i>飞机作业信息管理</a>
+
+                            </li>
+                            <li>
+                                <a href="morris-chart.html">地面作业信息</a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="Pages/PlaneLogCalender.html" target="_iframeContent">火箭</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneLog.html" target="_iframeContent">高炮</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="morris-chart.html">人员信息<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="Pages/PlaneLogCalender.html" target="_iframeContent">基本信息</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneLog.html" target="_iframeContent">成绩信息</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="morris-chart.html">装备信息<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="Pages/PlaneLogCalender.html" target="_iframeContent">基本信息</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneLog.html" target="_iframeContent">维修信息</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneLog.html" target="_iframeContent">年检信息</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="morris-chart.html">弹药信息<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="Pages/PlaneLogCalender.html" target="_iframeContent">库存信息</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneLog.html" target="_iframeContent">调动信息</a>
+                                    </li>
+                                    <li>
+                                        <a href="Pages/PlaneLog.html" target="_iframeContent">问题弹药</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="Pages/PlaneWorkInfo.html" target="_iframeContent"><i class="fa fa-qrcode"></i>科技支撑<span class="fa arrow"></span></a>
+                    </li>
+
+                    <li>
+                        <a href="Pages/PlaneWorkInfo.html" target="_iframeContent"><i class="fa fa-qrcode"></i>网站链接<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="chart.html"><i class="icon fa fa-plane"></i><span class="fa arrow"></span>中国气象局业务内网 </a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="http://10.1.64.154/idata/" target="_iframeContent">国家气象业务内网</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://10.1.64.154/idata/web/jump/to?urlId=5" target="_iframeContent">人工影响天气</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="morris-chart.html"><span class="fa arrow"></span>北京市气象局业务内网</a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="http://172.18.3.17/" target="_iframeContent">北京市气象局导航页</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://10.224.8.26/" target="_iframeContent">北京市气象局办公系统</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://172.18.3.17/notes_index.htm" target="_iframeContent">国家局NOTES邮箱</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="morris-chart.html"><span class="fa arrow"></span>气象外网</a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="http://www.cma.gov.cn/" target="_iframeContent">中国气象局</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.bjmb.gov.cn/" target="_iframeContent">北京市气象局</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                </ul>
+            
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+
+        <!-- . PAGE WRAPPER  -->
+        <div id="page-wrapper" class="embed-responsive embed-responsive-16by9">
+            <iframe name="_iframeContent" class="embed-responsive-item" src="Pages/PlaneManager/Pages/PlaneMain.html" scrolling="auto"></iframe>
+            <!--<iframe name="_iframeContent" class="embed-responsive-item" src="Pages/PlanePic.html" scrolling="auto"></iframe>-->
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+
+    </div>
+
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+
+
+    <script src="../../ThirdParty/JQuery/jquery-1.10.2.js"></script>
+    <script src="../../ThirdParty/Bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../ThirdParty/JQuery/jquery.metisMenu.js"></script>
+
+    <!-- Custom Js -->
+    <script src="../../../Assets/scripts/custom-scripts.js"></script>
+
+    <script>
+
+        window.onload = function () {
+
+            var ss = window.frames["_iframeContent"].document; //.document.getElementById("iframe中控件的ID")
+            var curHtml = ss.URL;
+
+            //alert(ss.URL);
+            window.onbeforeunload = function (event) {
+                event.returnValue = "我在这写点东西...";
+            };
+        }
+
+        var targetArray = ['_blank', '_self', '_parent', '_top', '_iframeContent'];
+        var ul_classArray = ['nav', 'nav nav-second-level', 'nav nav-third-level','nav nav-fourth-level'];
+
+        var businessBaseUrl = appConfig.webPageUrl + '/Pages/BusinessManager';
+        var infoBaseUrl = appConfig.webPageUrl + '/Pages/InfoManager';
+        var planeBaseUrl = appConfig.webPageUrl + '/Pages/Plane';
+
+        var baseNav = [
+            {
+                href: appConfig.webPageUrl + '/Index.html',
+                name: '首页',
+                target: targetArray[1],
+                i_class: 'fa fa-dashboard'
+            },
+            {
+                href: '',
+                name: '实时业务',
+                target: targetArray[4],
+                i_class: 'fa fa-table',
+                ul_class: ul_classArray[1],
+                children: [
+                    {
+                        href: '#',
+                        name: '过程预报',
+                        target: '',
+                        i_class: '',
+                        ul_class: ul_classArray[2],
+                        children: [
+                            {
+                                href: '#',
+                                name: '业务规范',
+                                target: targetArray[4],
+                                i_class: ''
+                            },
+                            {
+                                href: '#',
+                                name: '市局精细化预报',
+                                target: targetArray[4],
+                                i_class: ''
+                            },
+                            {
+                                href: '#',
+                                name: '作业计划',
+                                target: targetArray[4],
+                                i_class: '',
+                                ul_class: ul_classArray[3],
+                                children: [
+                                    {
+                                        href: '#',
+                                        name: '产品制作',
+                                        target: targetArray[4],
+                                        i_class: ''
+                                    },
+                                    {
+                                        href: '#',
+                                        name: '产品发布',
+                                        target: targetArray[4],
+                                        i_class: ''
+                                    },
+                                    {
+                                        href: '#',
+                                        name: '统计查询',
+                                        target: targetArray[4],
+                                        i_class: ''
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        href: '#',
+                        name: '潜力预报',
+                        target: '',
+                        i_class: '',
+                        ul_class: ul_classArray[2],
+                        children: [
+                            {
+                                href: '#',
+                                name: '业务规范',
+                                target: targetArray[4],
+                                i_class: ''
+                            },
+                            {
+                                href: '#',
+                                name: '市局模式预报产品',
+                                target: targetArray[4],
+                                i_class: ''
+                            },
+                            {
+                                href: '#',
+                                name: '冷云催化模式产品',
+                                target: targetArray[4],
+                                i_class: ''
+                            },
+                            {
+                                href: '#',
+                                name: '潜力预报',
+                                target: targetArray[4],
+                                i_class: '',
+                                children: [
+                                    {
+                                        href: '#',
+                                        name: '产品制作',
+                                        target: targetArray[4],
+                                        i_class: ''
+                                    },
+                                    {
+                                        href: '#',
+                                        name: '产品发布',
+                                        target: targetArray[4],
+                                        i_class: ''
+                                    },
+                                    {
+                                        href: '#',
+                                        name: '统计查询',
+                                        target: targetArray[4],
+                                        i_class: ''
+                                    }
+                                ]
+                            },
+                            {
+                                href: '#',
+                                name: '飞机预案',
+                                target: targetArray[4],
+                                i_class: '',
+                                children: [
+                                    {
+                                        href: '#',
+                                        name: '产品制作',
+                                        target: targetArray[4],
+                                        i_class: ''
+                                    },
+                                    {
+                                        href: '#',
+                                        name: '产品发布',
+                                        target: targetArray[4],
+                                        i_class: ''
+                                    },
+                                    {
+                                        href: '#',
+                                        name: '统计查询',
+                                        target: targetArray[4],
+                                        i_class: ''
+                                    }
+                                ]
+                            },
+
+                        ]
+                    },
+                    {
+                        href: '#',
+                        name: '监测预警',
+                        target: '',
+                        i_class: '',
+                        ul_class: ul_classArray[2],
+                        children: [
+                            {
+                                href: '#',
+                                name: '业务规范',
+                                target: targetArray[4],
+                                i_class: ''
+                            },
+                            {
+                                href: '#',
+                                name: '监测预警产品',
+                                target: targetArray[4],
+                                i_class: '',
+                                children: [
+                                    {
+                                        href: '#',
+                                        name: '产品制作',
+                                        target: targetArray[4],
+                                        i_class: ''
+                                    },
+                                    {
+                                        href: '#',
+                                        name: '产品发布',
+                                        target: targetArray[4],
+                                        i_class: ''
+                                    },
+                                    {
+                                        href: '#',
+                                        name: '统计查询',
+                                        target: targetArray[4],
+                                        i_class: ''
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        href: '#',
+                        name: '跟踪指挥',
+                        target: '',
+                        i_class: '',
+                        ul_class: ul_classArray[2],
+                        children: [
+                            {
+                                href: planeBaseUrl + '/Pages/PlaneDTCalendar.html',
+                                name: '日历图',
+                                target: targetArray[4],
+                                i_class: ''
+                            },
+                            {
+                                href: planeBaseUrl + '/Pages/PlaneDTSearch.html',
+                                name: '信息查询',
+                                target: targetArray[4],
+                                i_class: ''
+                            }
+                        ]
+                    },
+                    {
+                        href: '#',
+                        name: '效果检验',
+                        target: '',
+                        i_class: '',
+                        ul_class: ul_classArray[2],
+                        children: [
+                            {
+                                href: planeBaseUrl + '/Pages/PlaneDTCalendar.html',
+                                name: '日历图',
+                                target: targetArray[4],
+                                i_class: ''
+                            },
+                            {
+                                href: planeBaseUrl + '/Pages/PlaneDTSearch.html',
+                                name: '信息查询',
+                                target: targetArray[4],
+                                i_class: ''
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                href: planeBaseUrl + '/Pages/PlaneSingleInfo.html',
+                name: '日常业务',
+                target: targetArray[4],
+                i_class: 'fa fa-qrcode'
+            },
+            {
+                href: '',// planeBaseUrl + '/Pages/PlaneCesium.html',
+                name: '保障业务',
+                target: targetArray[4],
+                i_class: 'fa fa-table'
+            },
+            {
+                href: '',// planeBaseUrl + '/Pages/PlaneCesium.html',
+                name: '信息管理',
+                target: targetArray[4],
+                i_class: 'fa fa-table'
+
+            },
+            {
+                href: '',// planeBaseUrl + '/Pages/PlaneCesium.html',
+                name: '科技支撑',
+                target: targetArray[4],
+                i_class: 'fa fa-table'
+            },
+            {
+                href: '',// planeBaseUrl + '/Pages/PlaneCesium.html',
+                name: '网站链接',
+                target: targetArray[4],
+                i_class: 'fa fa-table'
+            }
+
+        ];
+
+        var navId = 'main-menu';
+
+        if (planeNav) {
+            var navStr = '<ul class="nav" id="' + navId + '" >' + createNav(planeNav) + '</ul>';
+            $('#' + navId).html(navStr);
+            $('#main-menu').metisMenu();
+        }
+
+
+    </script>
+
+</body>
+</html>
